@@ -17,27 +17,26 @@ namespace WebApp_OPPConcepts
                 Console.WriteLine("***************");
                 Console.WriteLine(" ");
 
-                Console.WriteLine("Please type your year: ");
+                Console.Write("Please type your year: ");
                 int year = Convert.ToInt32(Console.ReadLine());
                 Console.ReadKey();
 
                 Console.WriteLine(" ");
 
-                Console.WriteLine("Please type your month: ");
+                Console.Write("Please type your month: ");
                 int month = Convert.ToInt32(Console.ReadLine());
                 Console.ReadKey();
 
                 Console.WriteLine(" ");
 
-                Console.WriteLine("Please type your day: ");
+                Console.Write("Please type your day: ");
                 int day = Convert.ToInt32(Console.ReadLine());
                 Console.ReadKey();
 
                 //para instanciar el objeto:
-                var dateObject = new Date(year, month, day); // todo lo que yo haga y mande, me lo mada con un toString
-                                                             // al menos que yo empiece a desarrollar la lógica
-                Console.Write("The date entered is: " + dateObject);
-                Console.WriteLine(" ");
+                 // todo lo que yo haga y mande, me lo mada con un toString
+                 // al menos que yo empiece a desarrollar la lógica
+            
 
 
                 //traerme la información de la clase Employee
@@ -47,8 +46,8 @@ namespace WebApp_OPPConcepts
                     Id = 1,
                     FirstName = "Patricia",
                     LastName = "Alvarez",
-                    BirthDate = dateObject,
-                    HiringDate = dateObject,
+                    BirthDate = new Date(year, month, day),
+                    HiringDate =new Date(year, month, day),
                     IsActive = true,
                     Salary = 1160000
 
@@ -56,20 +55,61 @@ namespace WebApp_OPPConcepts
                 Console.WriteLine(salaryEmployee); //para leer los datos
                 Console.WriteLine(" ");
 
+
+
                 Employee commissionEmployee = new CommissionEmployee()
                 {
                     Id = 1,
                     FirstName = "Julio",
                     LastName = "Pérez",
-                    BirthDate = dateObject,
-                    HiringDate = dateObject,
+                    BirthDate = new Date(year, month, day),
+                    HiringDate =new Date(year, month, day),
                     IsActive = false,
                     CommissionPercentage = 5,
                     Sales = 20000000
 
                 };
                 Console.WriteLine(commissionEmployee);
+                Console.WriteLine(" ");
 
+
+                Console.Write("Please type the ID: ");
+                int id = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine(" ");
+
+                Console.Write("Please type the First Name: ");
+                string firstName = Console.ReadLine();
+                Console.WriteLine(" ");
+
+                Console.Write("Please type the Last Name: ");
+                string lastName = Console.ReadLine();
+                Console.WriteLine(" ");
+
+                Console.Write("Please type the if is Active ID: ");
+                bool isActive = Convert.ToBoolean(Console.ReadLine());
+                Console.WriteLine(" ");
+
+                Console.Write("Please type the number of hours: ");
+                float hours = Convert.ToSingle(Console.ReadLine());
+                Console.WriteLine(" ");
+
+                Console.Write("Please type value per Hours: ");
+                decimal hourValue= Convert.ToDecimal(Console.ReadLine());
+                Console.WriteLine(" ");
+
+                Employee hourlyEmployee = new HourlyEmployee()
+                {
+                    Id = id,
+                    FirstName = firstName,
+                    LastName = lastName,
+                    BirthDate = new Date(year, month, day),
+                    HiringDate =new Date(year, month, day),
+                    IsActive = isActive,
+                    Hours = hours,
+                    HourValue = hourValue
+
+                };
+                Console.WriteLine(hourlyEmployee);
             }
             catch (Exception message)
             {

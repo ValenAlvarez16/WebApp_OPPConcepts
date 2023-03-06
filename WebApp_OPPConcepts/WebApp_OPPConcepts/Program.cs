@@ -37,7 +37,23 @@ namespace WebApp_OPPConcepts
                 var dateObject = new Date(year, month, day); // todo lo que yo haga y mande, me lo mada con un toString
                                                              // al menos que yo empiece a desarrollar la lógica
                 Console.Write("The date entered is: " + dateObject);
-                
+
+
+                //traerme la información de la clase Employee
+
+                Employee salaryEmployee = new SalaryEmployee()
+                {
+                    Id = 1,
+                    FirstName = "Patricia",
+                    LastName = "Alvarez",
+                    BirthDate = dateObject,
+                    HiringDate = dateObject,
+                    IsActive = true,
+                    Salary = 1160000
+
+                };
+                Console.WriteLine(salaryEmployee); //para leer los datos
+
 
             }
             catch (Exception message)

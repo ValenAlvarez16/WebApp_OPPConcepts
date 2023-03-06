@@ -82,7 +82,7 @@ namespace WebApp_OPPConcepts
         public override string ToString()
         {
             return String.Format("{0:0000}/{1:00}/{2:00}", _year, _month, _day);
-        //$"{_year}/ {_month}/ {_day}";  //sobreescribiendo lo del papà para que no le muestre un ToString
+        //$"{_year}/ {_month}/ {_day}";-- interpoblación  //sobreescribiendo lo del papà para que no le muestre un ToString
         
         }
         #endregion

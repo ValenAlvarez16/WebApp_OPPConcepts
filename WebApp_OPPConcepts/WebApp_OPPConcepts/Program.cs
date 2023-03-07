@@ -1,4 +1,5 @@
 ﻿using System;
+using WebApp_OPPConcepts.Helpers;
 
 namespace WebApp_OPPConcepts
 {
@@ -52,7 +53,7 @@ namespace WebApp_OPPConcepts
                     Salary = 1160000
 
                 };
-                Console.WriteLine(salaryEmployee); //para leer los datos
+               // Console.WriteLine(salaryEmployee); //para leer los datos
                 Console.WriteLine(" ");
 
 
@@ -69,7 +70,7 @@ namespace WebApp_OPPConcepts
                     Sales = 20000000
 
                 };
-                Console.WriteLine(commissionEmployee);
+                //Console.WriteLine(commissionEmployee);
                 Console.WriteLine(" ");
 
 
@@ -109,7 +110,7 @@ namespace WebApp_OPPConcepts
                     HourValue = hourValue
 
                 };
-                Console.WriteLine(hourlyEmployee);
+                //Console.WriteLine(hourlyEmployee);
                 Console.WriteLine(" ");
 
 
@@ -126,8 +127,16 @@ namespace WebApp_OPPConcepts
                     Base = 5000000
 
                 };
-                Console.WriteLine(basecommissionEmployee);
+                //Console.WriteLine(basecommissionEmployee);
                 Console.WriteLine(" ");
+
+                EmployeeHelper employeeHelper = new EmployeeHelper(salaryEmployee, commissionEmployee, 
+                    hourlyEmployee, basecommissionEmployee);
+
+                Console.WriteLine($"Total Payroll:.... {employeeHelper.GetPayrollFromActiveEmployees:C2}");
+                Console.WriteLine(" ");
+
+
 
                 Invoice invoice = new Invoice()
                 {
